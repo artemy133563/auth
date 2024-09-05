@@ -300,7 +300,7 @@ function Library:CreateWindow(args: WindowArgs)
 
 			task.delay(1, function()
 				Copy.TextColor3 = Color3.fromRGB(235, 235, 235)
-				Copy.Text = "Copy"
+				Copy.Text = "Copy Link again"
 			end)
 		end
 	end
