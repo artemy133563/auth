@@ -1,4 +1,4 @@
--- Updated: 05.09.24
+-- Updated: 06.09.24
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local UserInputService = game:GetService('UserInputService')
@@ -101,8 +101,8 @@ function Library:CreateWindow(args: WindowArgs)
         Name = "Info",
 		Parent = Frame,
 		AnchorPoint = Vector2.new(0.5, 0),
-		BackgroundColor3 = self.Colors.Background.main,
-        BackgroundTransparency = 0.7,
+		BackgroundColor3 = Color3.fromRGB(0, 0, 0),
+        BackgroundTransparency = 1,
 		Position = UDim2.new(0.5, 0, 0, 0),
 		Size = UDim2.new(1, 0, 0.15, 0),
 	})
@@ -179,7 +179,7 @@ function Library:CreateWindow(args: WindowArgs)
 		Parent = Field,
 		AnchorPoint = Vector2.new(0.5, 0.5),
 		BackgroundColor3 = self.Colors.Background.main,
-        BackgroundTransparency = 0.7,
+        BackgroundTransparency = 0.9,
 		Position = UDim2.new(0.5, 0, 0.5, 0),
 		Size = UDim2.new(0.95, 0, 0.85, 0),
 		Font = Enum.Font.GothamMedium,
@@ -206,7 +206,7 @@ function Library:CreateWindow(args: WindowArgs)
 		Font = Enum.Font.GothamMedium,
 		Parent = Actions,
 		BackgroundColor3 = self.Colors.Background.main,
-        BackgroundTransparency = 0.7,
+        BackgroundTransparency = 0.9,
 		AnchorPoint = Vector2.new(0, 0.5),
 		Position = UDim2.new(0.025, 0, 0.5, 0),
 		Size = UDim2.new(0.465, 0, 0.9, 0),
@@ -223,7 +223,7 @@ function Library:CreateWindow(args: WindowArgs)
 		Font = Enum.Font.GothamMedium,
 		Parent = Actions,
 		BackgroundColor3 = self.Colors.Background.main,
-        BackgroundTransparency = 0.7,
+        BackgroundTransparency = 0.9,
 		AnchorPoint = Vector2.new(0, 0.5),
 		Position = UDim2.new(0.515, 0, 0.5, 0),
 		Size = UDim2.new(0.465, 0, 0.9, 0),
@@ -249,7 +249,8 @@ function Library:CreateWindow(args: WindowArgs)
 		Font = Enum.Font.GothamMedium,
 		Parent = Discord,
 		AnchorPoint = Vector2.new(0.5, 0.5),
-		BackgroundColor3 = Color3.fromRGB(100, 0, 255),
+		BackgroundColor3 = Color3.fromRGB(0, 0, 255),
+		BackgroundTransparency = 0.5,
 		Position = UDim2.new(0.5, 0, 0.5, 0),
 		Size = UDim2.new(0.95, 0, 0.75, 0),
 		Text = args and "discord.gg/" .. args.serverCode or "discord.gg",
