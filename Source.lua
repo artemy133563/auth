@@ -1,4 +1,4 @@
--- Updated: 06.09.24
+-- Updated: 11.09.24
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local UserInputService = game:GetService('UserInputService')
@@ -264,7 +264,7 @@ function Library:CreateWindow(args: WindowArgs)
 			Position = UDim2.new(0, 0, 1.15, 0),
 			Size = UDim2.new(1, 0, 0.35, 0),
 			Font = Enum.Font.GothamBold,
-			Text = "the script exists thanks to 'You'.",
+			Text = args.supportLabel,
 			TextColor3 = Color3.fromRGB(195, 195, 195),
 			TextScaled = true,
 			TextWrapped = true,
@@ -331,3 +331,4 @@ function Library:CreateWindow(args: WindowArgs)
 end
 
 return Library
+
