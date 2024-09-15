@@ -31,3 +31,5 @@ function AisBoost:Verify(ApplicationId, Key)
 
   return false
 end
+
+return AisBoost
