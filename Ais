@@ -1,0 +1,33 @@
+local Lib = {}
+
+local request = http or http.request or http_request or (fluxus and fluxus.request) or request
+local function GetUserIp()
+  return pcall(function()
+    local response = request({
+      Url = "https://api.ipify.org/",
+      Method = "GET"
+    })
+
+    return response.Body
+  end)
+end
+
+local Hwid = crypt.base64.encode(GetUserIp())
+
+function Lib:GetLink(ApplicationId)
+  return string.format("https://gw.aisboost.com/a/%i?hwid=%i", ApplicationId, Hwid)
+end
+
+function Lib:Verify(ApplicationId, Key)
+  local status, response = pcall(function()
+    return game:HttpGet(string.format("https://api.aisboost.com/v1/authenticators/%i/redeem?hwid=%s&key=%s", ApplicationId, Hwid, Key))
+  end)
+
+  if status then 
+    return string.find(response, "true")
+  end
+
+  return false
+end
+
+return Lib
