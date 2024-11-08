@@ -1,4 +1,4 @@
--- Updated: 11.09.24
+-- Updated: 08.11.24
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local UserInputService = game:GetService('UserInputService')
@@ -8,8 +8,8 @@ local HttpService = game:GetService("HttpService")
 local Library = {
 	Colors = {
 		Background = {
-			base = Color3.fromRGB(0, 0, 0),
-			main = Color3.fromRGB(0, 0, 255),
+			base = Color3.fromRGB(30, 30, 30),
+			main = Color3.fromRGB(35, 35, 35),
 		}
 	}
 }
@@ -249,7 +249,7 @@ function Library:CreateWindow(args: WindowArgs)
 		Font = Enum.Font.GothamMedium,
 		Parent = Discord,
 		AnchorPoint = Vector2.new(0.5, 0.5),
-		BackgroundColor3 = Color3.fromRGB(0, 0, 255),
+		BackgroundColor3 = Color3.fromRGB(114, 137, 218),
 		BackgroundTransparency = 0.5,
 		Position = UDim2.new(0.5, 0, 0.5, 0),
 		Size = UDim2.new(0.95, 0, 0.75, 0),
